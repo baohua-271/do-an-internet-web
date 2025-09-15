@@ -41,7 +41,7 @@ Website giúp người dùng có thể xem, tìm kiếm và tham khảo các s�
 ## 🚀 Cách chạy dự án
 1. Clone repo về máy:
    ```bash
-   git clone https://github.com/ten-nhom/noi-that-web.git
+   git clone git@github.com:baohua-271/do-an-internet-web.git
 2. Mở file index.html bằng trình duyệt
 
 ---
