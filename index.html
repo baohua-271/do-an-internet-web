@@ -3,9 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Homepage</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; } 
+        body { font-family: Arial, sans-serif; }
+
+        header, footer { 
+            background: #ddd; 
+            padding: 20px; 
+            text-align: 
+            center; 
+        }
+        nav { 
+            background: #bbb; 
+            padding: 10px; 
+            text-align: 
+            center; }
+        nav a { 
+            margin: 0 15px; 
+            text-decoration: none; 
+            color: #000; 
+        }
+        main { 
+            display: flex; 
+            padding: 20px; 
+        }
+        .sidebar { 
+            width: 25%; 
+            background: #eee; 
+            padding: 15px; 
+        } 
+        .content { 
+            width: 75%; 
+            padding: 15px; 
+        }
+        .product { 
+            border: 1px solid #aaa; 
+            margin: 10px; padding: 20px; 
+            text-align: center; 
+            background: #f9f9f9; 
+        }
+        footer { 
+            margin-top: 20px; 
+        } 
+    </style>
 </head>
 <body>
-    
+    <h1>Homepage</h1>
+    <!-- Header: Logo + tiêu đề -->
+    <header> 
+        <h1>Website Bán Đồ Nội Thất</h1> 
+        <p>Logo / Slogan</p> 
+    </header>
+    <!-- Thanh điều hướng (Navigation) -->
+    <nav> 
+        <a href="#">Trang chủ</a> 
+        <a href="#">Sản phẩm</a> 
+        <a href="#">Giới thiệu</a> 
+        <a href="#">Liên hệ</a> 
+    </nav>
+    <!-- Nội dung chính -->
+    <main> 
+        <!-- Sidebar: Bộ lọc sản phẩm hoặc danh mục --> 
+        <aside class="sidebar"> 
+            <h2>Bộ lọc / Danh mục</h2> 
+            <ul> <li>Bàn ghế</li> 
+                <li>Tủ</li> 
+                <li>Giường</li> 
+                <li>Đèn</li> 
+            </ul> 
+        </aside>
+        <!-- Khu vực hiển thị sản phẩm --> 
+        <section class="content"> 
+            <h2>Sản phẩm nổi bật</h2> 
+            <!-- Mỗi khối product đại diện cho 1 sản phẩm --> 
+                <div class="product">Ảnh SP + Tên SP + Giá</div> 
+                <div class="product">Ảnh SP + Tên SP + Giá</div> 
+                <div class="product">Ảnh SP + Tên SP + Giá</div> 
+        </section> 
+    </main>
+    <!-- Footer: thông tin liên hệ --> 
+    <footer> 
+        <p>© 2025 Nội Thất Gia Bảo - Địa chỉ, Số điện thoại, Email</p> 
+    </footer>     
 </body>
 </html>
