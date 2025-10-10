@@ -12,15 +12,23 @@ header, footer {
 }
 
 nav { 
+    display: flex;
+    align-items: center;
     background: #deb887; /* darker beige */
-    padding: 10px; 
-    text-align: center;
+    padding: 10px 20px; 
+    height: 60px;
+    justify-self: flex-start;
 }
-
+nav .logo {
+    height: 100%;
+    width: auto;
+    
+}
 nav a { 
     margin: 0 15px; 
     text-decoration: none; 
     color: #000;
+    font-weight: bold;
 }
 
 main { 
