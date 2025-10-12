@@ -5,48 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>
 <body>
-    
+    <!-- Header: Logo + tiêu đề -->
+    <header>
     
     <!-- Thanh điều hướng (Navigation) -->
-    <nav> 
-        <img src="images/logo.png" alt="logo" class="logo">
-        <a href="#">Trang chủ</a> 
-        <a href="#">Sản phẩm</a> 
-        <a href="#">Giới thiệu</a> 
-        <a href="#">Liên hệ</a> 
-    </nav>
-    <!-- Header: Logo + tiêu đề -->
-    <header> 
-        <h1>Đồ Nội Thất Trong Nhà</h1> 
+    <nav class="navbar">
+            <div class="nav-left">
+                <a href="index.html" class="brand">
+                    <img src="images/logo8.jfif" alt="Zhome logo" class="logo">
+                    <strong>Zhome</strong>
+                </a>
+            </div>
+            <div class="nav-middle">
+                <ul>
+                    <li><a href="#">Sản phẩm</a></li>
+                    <li><a href="#">Khuyến mãi</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Về Zhome</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm . . .">
+                    <button><i class="fa fa-search"></i></button>
+                </div>
+                <div class="cart">
+                    <a href="#"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a>
+                </div>
+               
+                <div class="login">
+                    <i class="fa fa-user"></i>
+                    <a href="#"> Đăng nhập</a> / <a href="#"> Đăng ký</a>
+                </div>
+            </div>
+        
+    </nav> 
     </header>
+
+    
     <!-- Nội dung chính -->
-     <img src="images/banner-p.jpg" alt="Banner cho trang web"
-     width="400">
-    <main> 
-        <!-- Sidebar: Bộ lọc sản phẩm  --> 
-         
-        <aside class="sidebar"> 
-            <h2>Sản phẩm</h2> 
-            <ul> <li>Bàn ghế</li> 
-                <li>Tủ</li> 
-                <li>Giường</li> 
-                <li>Đèn</li> 
-            </ul> 
-        </aside>
-        <!-- Khu vực hiển thị sản phẩm --> 
-        <section class="content"> 
-            <h2>Sản phẩm nổi bật</h2> 
-            <!-- Mỗi khối product đại diện cho 1 sản phẩm --> 
-                <div class="product">Ảnh SP + Tên SP + Giá</div> 
-                <div class="product">Ảnh SP + Tên SP + Giá</div> 
-                <div class="product">Ảnh SP + Tên SP + Giá</div> 
-        </section> 
-    </main>
+     
+    <main>
+  <!-- Banner nhỏ, căn giữa -->
+  <div class="banner-wrapper">
+    <img src="images/banner0.jpg" alt="Banner" class="banner">
+  </div>
+
+  <!-- Khung sản phẩm -->
+  <section class="promotion">
+    <h2>Các sản phẩm khuyến mãi</h2>
+    <div class="product-list">
+      <div class="product-item">
+        <img src="sp1.jpg" alt="Sản phẩm 1">
+        <h3>Sản phẩm 1</h3>
+        <p class="price">₫199,000</p>
+      </div>
+      <div class="product-item">
+        <img src="sp2.jpg" alt="Sản phẩm 2">
+        <h3>Sản phẩm 2</h3>
+        <p class="price">₫299,000</p>
+      </div>
+      <div class="product-item">
+        <img src="sp3.jpg" alt="Sản phẩm 3">
+        <h3>Sản phẩm 3</h3>
+        <p class="price">₫399,000</p>
+      </div>
+      <div class="product-item">
+        <img src="sp4.jpg" alt="Sản phẩm 4">
+        <h3>Sản phẩm 4</h3>
+        <p class="price">₫499,000</p>
+      </div>
+    </div>
+  </section>
+</main>
+
     <!-- Footer: Thông tin liên hệ --> 
     <footer> 
-        <p>© Nội Thất Gia Bảo - Địa chỉ, Số điện thoại, Email</p> 
+        <div>
+            <p>Nội thất Zhome</p>
+        </div> 
+        <div>
+            <p>Thông tin chính sách</p>
+        </div>
+        <div>
+            <p>Thông tin liên hệ</p>
+        </div>
+        <div>
+            <p>Fanpage</p>
+        </div>
     </footer>     
 </body>
 </html>

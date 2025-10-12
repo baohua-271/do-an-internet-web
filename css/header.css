@@ -1,16 +1,3 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html, body {
-    height: 100%; /* chiếm full height*/
-    margin: 0;
-}
-body { 
-    font-family: Arial, sans-serif;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-                                    /* Header: chứ logo, tên , thanh nav */
 header{ 
     background: white;
     
@@ -115,68 +102,4 @@ header{
 
 .nav-middle ul li a:hover {
     text-decoration: underline;
-}
-
-                                    /* Phần main*/
-
-main { 
-    display: flex; 
-    padding: 20px;
-    background: #fff;
-    flex: 1;
-}
-.banner-wrapper {
-  width: 100%;               /* chiếm full container */
-  display: flex;
-  justify-content: center;   /* căn giữa banner nhỏ */
-  margin: 20px 0;
-}
-
-.banner {
-  width: 100%;   /* banner nhỏ thôi */
-  height: auto;
-}
-
-.promotion {
-  width: 90%;   /* khung sản phẩm rộng hơn banner */
-  margin: 30px auto;
-  text-align: center;
-}
-
-.product-list {
-  display: flex;
-  justify-content: space-between; /* 4 sản phẩm chia đều */
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.product-item {
-  flex: 1 1 calc(25% - 20px);
-  text-align: center;
-}
-
-.product-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-footer {
-    background: #d2b48c; /* beige */
-    padding: 15px 0; 
-    text-align: center;
-    color: #000;
-    margin-top: 20px;
 }
