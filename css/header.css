@@ -1,4 +1,5 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
 html, body {
     height: 100%; /* chiếm full height*/
     margin: 0;
@@ -13,7 +14,6 @@ body {
                                     /* Header: chứ logo, tên , thanh nav */
 header{ 
     background: #EBD7B3;
-    
     text-align: center;
     color: #000;
 }

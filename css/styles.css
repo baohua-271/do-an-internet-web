@@ -1,0 +1,58 @@
+.cart-bar {
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px;
+  border-bottom: 1px solid #ccc;
+  font-family: sans-serif;
+}
+
+.cart-left {
+  font-weight: bold;
+  color: #000;
+}
+
+/* Phần bên phải có 2 hàng */
+.cart-right {
+  display: flex;
+  flex-direction: column; /* xếp theo cột */
+  align-items: flex-end;  /* căn phải */
+  gap: 6px;
+}
+
+/* Hàng trên: 2 nút */
+.cart-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+
+
+.discount-btn {
+  background-color: #ccc;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+
+}
+
+.checkout-btn {
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+
+}
+
+/* Hàng dưới: tổng tiền */
+.total {
+  font-weight: bold;
+  color: #000;
+}
