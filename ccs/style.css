@@ -132,7 +132,7 @@ body {
 /* Khối Giới thiệu về Zhome */
 .first-main {
     width: 80%;
-    margin: 50px auto 50px 50px;
+    margin: 50px;
     background-color: #faf8f5; 
     border-top-left-radius: 50px;       /* bo cạnh tròn cạnh trên trái của khối */
     border-bottom-left-radius: 50px;    /* bo cạnh tròn cạnh dưới trái của khối */
@@ -145,7 +145,7 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.8;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* đổ bóng nhẹ để nổi khối */
-    font-size: 20px;
+    font-size: 30px;
 }
 
 /* chỉnh chữ "Chúng tôi là Zhome Việt Nam" */
@@ -190,7 +190,7 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.8;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* đổ bóng nhẹ để nổi khối */
-    font-size: 20px;
+    font-size: 30px;
 }
 
 /* chỉnh chữ "thông tin chính sách" to hơn đẹp hơn*/
@@ -245,10 +245,4 @@ footer {
     text-align: center;
     color: #000;
     margin-top: 20px;
-}
-
-
-/* kiểu chữ chung */
-h1, h2, h3, h4, h5, p, li {
-    font-family: 'Times New Roman', Times, serif;
 }
