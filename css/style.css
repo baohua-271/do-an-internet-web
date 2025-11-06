@@ -1,0 +1,248 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+    height: 100%; /* chiếm full height*/
+    margin: 0;
+}
+body { 
+    font-family: Arial, sans-serif;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+                                    /* Header: chứ logo, tên , thanh nav */
+header{ 
+    background: white;
+    
+    text-align: center;
+    color: #000;
+}
+
+.navbar {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 2px 20px; /* cách khung top/bottom 10px, left/right 20px */
+    border-bottom: 1px solid black;
+}
+
+
+/* Logo + Zhome */
+.nav-left .brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(98, 217, 179);
+    font-size: 30px;
+}
+
+.nav-left .brand .logo {
+    width: 90px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+/* Search + Cart + Login */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: auto;
+}
+
+.search-bar {
+  display: flex;
+}
+
+.search-bar input {
+  width: 400px;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-right: none;
+  border-radius: 4px 0 0 4px; /* bo tròn bên trái */
+  outline: none;
+  flex: 1;
+}
+
+.search-bar button {
+  width: 50px;
+  border: 2px solid #ccc;
+  border-left: none;
+  background-color: #555;
+  color: white;
+  border-radius: 0 4px 4px 0; /* bo tròn bên phải */
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.search-bar button i {
+  font-size: 16px; /* cỡ kính lúp */
+}
+
+.cart, login {
+  display: flex;           /* các link nằm cạnh nhau */
+  align-items: center;     /* căn giữa link theo chiều dọc */
+}
+
+.login a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+/* Phần dưới nav: menu liên kết sản phẩm */
+.nav-middle ul {
+    display: flex;
+    list-style: none;
+    padding: 10px 20px;
+}
+
+.nav-middle ul li {
+    margin-right: 40px;
+}
+
+.nav-middle ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.nav-middle ul li a:hover {
+    text-decoration: underline;
+}
+
+                                    /* Phần body */
+/* Phần Css của tôi*/
+/* -----------------------------------------------------------------------------------------------------------------------------*/
+
+/* Màu nền body */
+body {
+    background: linear-gradient(to bottom, #f3f1ed, #eae4dc);
+}
+
+/* Phần main */
+/* Khối Giới thiệu về Zhome */
+.first-main {
+    width: 80%;
+    margin: 50px;
+    background-color: #faf8f5; 
+    border-top-left-radius: 50px;       /* bo cạnh tròn cạnh trên trái của khối */
+    border-bottom-left-radius: 50px;    /* bo cạnh tròn cạnh dưới trái của khối */
+    border-top-right-radius: 50px;      /* bo cạnh tròn cạnh trên phải của khối */
+    border-bottom-right-radius: 50px;   /* bo cạnh tròn cạnh dưới phải của khối */
+    
+    padding: 50px;
+    border-radius: 40px;
+    color: #3a3a3a; /* Màu chữ xám đậm, dễ đọc hơn đen */
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* đổ bóng nhẹ để nổi khối */
+    font-size: 30px;
+}
+
+/* chỉnh chữ "Chúng tôi là Zhome Việt Nam" */
+.first-main h1 {
+    color: #055e61;
+    font-size: 40px;
+    font-weight: 700;
+    border-bottom: 3px solid #c9a26b; 
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Đoạn văn cách đều, dễ đọc hơn */
+.first-main p {
+    margin-bottom: 15px;
+}
+
+/* Danh sách bullet đẹp hơn */
+.first-main ol {
+    margin-left: 30px;
+}
+
+.first-main li {
+    margin-bottom: 8px;
+}
+
+
+
+/*khối Thông tin chính sách */
+.last-main {
+    width: 80%;
+    margin: 50px 50px 50px auto;
+    background-color: #faf8f5; 
+    border-top-left-radius: 50px;       /* bo cạnh tròn cạnh trên trái của khối */
+    border-bottom-left-radius: 50px;    /* bo cạnh tròn cạnh dưới trái của khối */
+    border-top-right-radius: 50px;      /* bo cạnh tròn cạnh trên phải của khối */
+    border-bottom-right-radius: 50px;   /* bo cạnh tròn cạnh dưới phải của khối */
+    padding: 50px;
+
+    border-radius: 40px;
+    color: #3a3a3a; /* Màu chữ xám đậm, dễ đọc hơn đen */
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* đổ bóng nhẹ để nổi khối */
+    font-size: 30px;
+}
+
+/* chỉnh chữ "thông tin chính sách" to hơn đẹp hơn*/
+.last-main h1 {
+    color: #055e61;
+    font-size: 40px;
+    font-weight: 700;
+    border-bottom: 3px solid #c9a26b; 
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* chỉnh các phần tiêu đề to hơn*/
+.last-main h3, h4, h5 {
+    color: #055e61;
+    font-size: 25px;
+    font-weight: 700;
+    border-bottom: 3px solid #c9a26b; 
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Đoạn văn cách đều, dễ đọc hơn */
+.last-main p {
+    margin-bottom: 15px;
+}
+
+/* Danh sách bullet đẹp hơn */
+.last-main ul {
+    margin-left: 30px;
+}
+
+.last-main li {
+    margin-bottom: 8px;
+}
+
+/* Chỉnh thụt vào 1 tab */
+ul, ol {
+  margin-left: 40px;
+  line-height: 1.5;
+}
+
+/* Phần Css của tôi*/
+/* -----------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* phần footer */
+footer {
+    background: #d2b48c;
+    padding: 15px 0; 
+    text-align: center;
+    color: #000;
+    margin-top: 20px;
+}
