@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zhome - Nội thất hiện đại</title>
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sản phẩm - Zhome</title>
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/breadcrumb.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 </head>
 <body>
@@ -51,55 +52,19 @@
       </div>
     </nav>
 
-<header>
-    <div class="banner">
-      <div class="slides">
-        <img src="images/banners/banner1.jpg" class="active" alt="Banner 1">
-        <img src="images/banners/banner2.jpg" alt="Banner 2">
-        <img src="images/banners/banner3.jpg" alt="Banner 3">
-        <img src="images/banners/banner4.jpg" alt="Banner 4">
-      </div>
-      <button class="prev">&#10094;</button>
-      <button class="next">&#10095;</button>
-    </div>
-</header>
+<!-- Breadcrumb -->
+<nav class="breadcrumb" id="breadcrumb"></nav>
 
-    
-<!-- Nội dung chính -->
+
+<header id="page-banner"></header>
+
 <main>
-<!-- Khung sản phẩm -->
-  <!-- Section 1: Sản phẩm mới -->
-  <section class="product-section">
-    <h2>Sản phẩm mới</h2>
-    <div class="product-list" id="new-products"></div>
-  </section>
-
-  <!-- Section 2: Sản phẩm giảm giá -->
-  <section class="product-section">
-    <h2>Sản phẩm giảm giá</h2>
-    <div class="product-list" id="sale-products"></div>
-  </section>
-
-  <!-- Section 3: Sản phẩm bán chạy -->
-  <section class="product-section">
-    <h2>Sản phẩm bán chạy</h2>
-    <div class="product-list" id="best-products"></div>
-  </section>
-
-  <!-- Section 4: Gợi ý sản phẩm -->
-  <section class="suggestion-section">
-    <h2>Gợi ý sản phẩm</h2>
-    <div class="carousel-wrapper">
-      <div id="suggestion-track"></div>
-    </div>
-  </section>
-
-
-
+  <h1 id="category-title"></h1>
+  <div id="product-list" class="product-list"></div>
 </main>
 
 
-<!-- Footer -->
+
 <footer class="footer">
   <div class="footer-container">
 
@@ -135,7 +100,7 @@
     <div class="footer-column">
       <h3>FANPAGE</h3>
       <div class="fanpage-box">
-       <iframe
+        <iframe
          src="https://www.facebook.com/plugins/page.php?
           href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61583227545841%26locale%3Dvi_VN&
           tabs=timeline&width=280&height=130&small_header=true&
@@ -150,6 +115,7 @@
         </iframe>
       </div>
     </div>
+
   </div>
 
   <!-- Bản quyền -->
@@ -158,9 +124,9 @@
   </div>
 </footer>
 
-
-<script src="js/home.js"></script>
-<script src="js/nav.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/breadcrumb.js"></script>
 
 </body>
 </html>

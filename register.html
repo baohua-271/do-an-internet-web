@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng ký - Zhome</title>
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+<!-- Thanh điều hướng (Navigation) -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="index.html" class="brand">
+          <img src="images/logo8 - Copy.jfif" alt="Zhome logo" class="logo">
+          <strong>Zhome</strong>
+        </a>
+      </div>
+      <div class="nav-middle">
+        <ul>
+          <li class="dropdown">
+            <a href="products.html">Sản phẩm</a>
+            <ul class="dropdown-menu">
+              <li><a href="products.html?category=bedroom">Phòng ngủ</a></li>
+              <li><a href="products.html?category=livingroom">Phòng khách</a></li>
+              <li><a href="products.html?category=diningroom">Phòng ăn</a></li>
+              <li><a href="products.html?category=office">Phòng làm việc</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Khuyến mãi</a></li>
+          <li><a href="#">Tin tức</a></li>
+          <li><a href="about.html">Về Zhome</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <div class="search-bar" id="searchForm">
+          <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm . . .">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="cart">
+          <i class="fa fa-shopping-cart"></i>
+          <a href="cart.html"> Giỏ hàng</a>
+        </div>
+        <div class="login">
+          <i class="fa fa-user"></i>
+          <a href="login.html"> Đăng nhập / </a> <a href="register.html"> Đăng ký</a>
+        </div>
+      </div>
+    </nav>
+
+
+  <div class="login-container">
+    <div class="login-box">
+      <h2>Tạo tài khoản</h2>
+      <form id="registerForm">
+        <div class="input-group">
+          <i class="fa fa-user"></i>
+          <input type="text" id="reg_fullname" placeholder="Họ và tên" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fa fa-envelope"></i>
+          <input type="email" id="reg_email" placeholder="Email" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fa fa-lock"></i>
+          <input type="password" id="reg_password" placeholder="Mật khẩu" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fa fa-lock"></i>
+          <input type="password" id="reg_confirm" placeholder="Xác nhận mật khẩu" required>
+        </div>
+
+        <button type="submit" class="btn-login">Đăng ký</button>
+
+        <p class="register-link">
+          Đã có tài khoản? 
+          <a href="login.html">Đăng nhập</a>
+        </p>
+      </form>
+    </div>
+  </div>
+  <script src="js/nav.js"></script>
+  <script src="js/register.js"></script>
+
+</body>
+</html>

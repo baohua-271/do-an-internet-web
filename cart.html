@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zhome - Nội thất hiện đại</title>
-    <link rel="stylesheet" href="css/home.css">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/breadcrumb.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
@@ -36,9 +37,9 @@
         </ul>
       </div>
       <div class="nav-right">
-        <div class="search-bar" id="searchForm">
-          <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm . . .">
-            <button type="submit"><i class="fa fa-search"></i></button>
+        <div class="search-bar">
+          <input type="text" placeholder="Tìm kiếm sản phẩm . . .">
+            <button><i class="fa fa-search"></i></button>
         </div>
         <div class="cart">
           <i class="fa fa-shopping-cart"></i>
@@ -51,51 +52,98 @@
       </div>
     </nav>
 
-<header>
-    <div class="banner">
-      <div class="slides">
-        <img src="images/banners/banner1.jpg" class="active" alt="Banner 1">
-        <img src="images/banners/banner2.jpg" alt="Banner 2">
-        <img src="images/banners/banner3.jpg" alt="Banner 3">
-        <img src="images/banners/banner4.jpg" alt="Banner 4">
-      </div>
-      <button class="prev">&#10094;</button>
-      <button class="next">&#10095;</button>
-    </div>
-</header>
+<nav class="breadcrumb" id="breadcrumb"></nav>
 
-    
-<!-- Nội dung chính -->
 <main>
-<!-- Khung sản phẩm -->
-  <!-- Section 1: Sản phẩm mới -->
-  <section class="product-section">
-    <h2>Sản phẩm mới</h2>
-    <div class="product-list" id="new-products"></div>
-  </section>
+<div class="cart-bar">
+  <div class="cart-left">
+    <span> GIỎ HÀNG</span>
+  </div>
 
-  <!-- Section 2: Sản phẩm giảm giá -->
-  <section class="product-section">
-    <h2>Sản phẩm giảm giá</h2>
-    <div class="product-list" id="sale-products"></div>
-  </section>
-
-  <!-- Section 3: Sản phẩm bán chạy -->
-  <section class="product-section">
-    <h2>Sản phẩm bán chạy</h2>
-    <div class="product-list" id="best-products"></div>
-  </section>
-
-  <!-- Section 4: Gợi ý sản phẩm -->
-  <section class="suggestion-section">
-    <h2>Gợi ý sản phẩm</h2>
-    <div class="carousel-wrapper">
-      <div id="suggestion-track"></div>
+  <div class="cart-right">
+    <div class="cart-buttons">
+      <button class="discount-btn">MÃ GIẢM GIÁ</button>
+      <button class="checkout-btn">THANH TOÁN</button>
     </div>
-  </section>
+    <span class="total">TỔNG TIỀN:</span>
+  </div>
+</div>
+
+<!------------------------------ Header: Logo + tiêu đề ---------------------------------------->
+<ul class="cart-list">
+        <li class="cart-items">
+        <img class="item-img" src="images/product-img/chair-1.jpg" width="150px" height="auto">
+        
+        <div class="item-info">
+            <p class="item-name">CÁI BÀN 1</p>
+            <p class="item-price">
+                Giá: <span>500.000₫</span>
+            </p>
+        </div>
+
+        <div class="item-control">
+            <div class="quantity-control">
+                <button class="qty-btn">-</button>
+                <span class="quantity">1</span>
+                <button class="qty-btn">+</button>
+            </div>
 
 
+            <button class="remove-btn">
+            <img src="images/web-img/remove-btn.png" width="20" alt="Remove">
+            </button>
+        </div>
+    </li>
+        
+    <li class="cart-items">
+        <img class="item-img" src="images/product-img/chair-1.jpg" width="150px" height="auto">
+        
+        <div class="item-info">
+            <p class="item-name">CÁI BÀN 1</p>
+            <p class="item-price">
+                Giá: <span>500.000₫</span>
+            </p>
+        </div>
 
+        <div class="item-control">
+            <div class="quantity-control">
+                <button class="qty-btn">-</button>
+                <span class="quantity">1</span>
+                <button class="qty-btn">+</button>
+            </div>
+
+
+            <button class="remove-btn">
+            <img src="images/web-img/remove-btn.png" width="20" alt="Remove">
+            </button>
+        </div>
+    </li>
+
+        <li class="cart-items">
+        <img class="item-img" src="images/product-img/chair-1.jpg" width="150px" height="auto">
+        
+        <div class="item-info">
+            <p class="item-name">CÁI BÀN 1</p>
+            <p class="item-price">
+                Giá: <span>500.000₫</span>
+            </p>
+        </div>
+
+        <div class="item-control">
+            <div class="quantity-control">
+                <button class="qty-btn">-</button>
+                <span class="quantity">1</span>
+                <button class="qty-btn">+</button>
+            </div>
+
+
+            <button class="remove-btn">
+            <img src="images/web-img/remove-btn.png" width="20" alt="Remove">
+            </button>
+        </div>
+    </li>
+
+</ul>
 </main>
 
 
@@ -150,17 +198,18 @@
         </iframe>
       </div>
     </div>
+
   </div>
 
   <!-- Bản quyền -->
   <div class="footer-bottom">
     <p>© 2025 ZHome Furniture. All rights reserved.</p>
   </div>
-</footer>
-
-
-<script src="js/home.js"></script>
-<script src="js/nav.js"></script>
-
+</footer>  
+    
+    
+    <script src="js/breadcrumb.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 </html>
