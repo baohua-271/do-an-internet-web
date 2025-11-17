@@ -145,7 +145,150 @@ main {
 }
 
 
-/* --- Gợi ý sản phẩm --- */
+/* ===== CHÍNH SÁCH ƯU ĐÃI ===== */
+
+/* Container chính - Thay đổi width và căn giữa */
+.service-container {
+    display: flex;
+    flex-wrap: wrap; 
+    width: 80%; 
+    height: 250px;
+    margin: 0 auto; /* **Căn giữa container** */
+    background-color: white;
+    border: 1px solid #ddd;
+    min-height: 150px; /* Đặt chiều cao tối thiểu để cân đối hơn */
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* Item dịch vụ - Tăng padding để làm cho item cao hơn */
+.service-item {
+    flex: 1 1 25%;
+    min-width: 220px; /* Tăng min-width để nội dung rộng rãi hơn */
+    padding: 40px 15px; /* **ĐÃ THAY ĐỔI: Tăng padding dọc** */
+    text-align: center;
+    border-right: 1px solid #eee;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s; /* Thêm hiệu ứng hover nhẹ */
+}
+
+/* Hiệu ứng hover cho item */
+.service-item:hover {
+    background-color: #f9f9f9;
+}
+
+/* Loại bỏ border-right cho item cuối cùng trên desktop */
+.service-item:last-child {
+    border-right: none;
+}
+
+/* Icon - Tăng kích thước */
+.icon {
+    position: relative;
+    color: #333; /* Màu icon đậm hơn */
+    margin-bottom: 15px; /* Tăng khoảng cách dưới icon */
+    line-height: 1; 
+}
+
+.icon svg {
+    width: 40px; /* **ĐÃ THAY ĐỔI: Tăng kích thước icon** */
+    height: 40px;
+    stroke-width: 1.5;
+}
+
+/* Badge (số 1/1 và 24/7) - Tinh chỉnh vị trí và font cho icon lớn hơn */
+.badge {
+    position: absolute;
+    font-size: 11px; /* Tăng font badge */
+    font-weight: bold;
+    color: #444;
+    /* Tinh chỉnh vị trí cho "1 / 1" */
+    top: 35%;
+    left: 28%;
+}
+
+.badge-247 {
+    position: absolute;
+    font-size: 10px; /* Tăng font badge */
+    font-weight: bold;
+    color: #444;
+    /* Tinh chỉnh vị trí cho "24 / 7" */
+    top: 20%;
+    left: 100%;
+    right: 40%;
+
+}
+
+
+/* Tiêu đề chính - Tăng kích thước font */
+.title {
+    font-size: 17px; /* **ĐÃ THAY ĐỔI: Tăng kích thước font** */
+    font-weight: 600; /* Làm tiêu đề đậm hơn */
+    color: #222;
+    margin-top: 5px;
+}
+
+/* Tiêu đề phụ (Miễn Phí) - Tăng kích thước font */
+.subtitle {
+    font-size: 14px; /* **ĐÃ THAY ĐỔI: Tăng kích thước font** */
+    color: #888;
+    margin-top: 5px;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* Màn hình từ 992px trở xuống (2 cột) */
+@media (max-width: 992px) {
+    .service-container {
+        width: 90%; /* Cho container rộng hơn trên tablet */
+    }
+    .service-item {
+        flex: 1 1 50%; /* 2 item trên 1 hàng (50%) */
+        border-bottom: 1px solid #eee; 
+    }
+
+    /* Thiết lập lại border-right cho item thứ 2 */
+    .service-item:nth-child(2) {
+        border-right: none;
+    }
+
+    /* Đảm bảo item 1 và 3 có border-right */
+    .service-item:nth-child(odd) {
+        border-right: 1px solid #eee;
+    }
+
+    /* Loại bỏ border-bottom cho item 3 và 4 */
+    .service-item:nth-child(3),
+    .service-item:nth-child(4) {
+        border-bottom: none;
+    }
+}
+
+/* Màn hình từ 576px trở xuống (1 cột) */
+@media (max-width: 576px) {
+    .service-container {
+        width: 100%; /* Full width trên điện thoại */
+    }
+    .service-item {
+        flex: 1 1 100%; /* 1 item trên 1 hàng (100%) */
+        border-right: none !important; 
+        border-bottom: 1px solid #eee;
+        padding: 25px 10px; /* Giảm padding cho điện thoại */
+    }
+
+    /* Loại bỏ border-bottom cho item cuối cùng */
+    .service-item:last-child {
+        border-bottom: none;
+    }
+}
+
+
+/* ===== GỢI Ý SẢN PHẨM ===== */
 .suggestion-section {
   width: 100%;
   margin: 40px auto;

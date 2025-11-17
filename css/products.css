@@ -103,3 +103,48 @@ main {
 .detail-btn:hover {
   background-color: #8b4513;
 }
+
+
+
+/* ===== PHẦN SẮP XẾP (Sort) ===== */
+.sort-container {
+  width: 80%;
+  margin: 0 auto 25px auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  background: #fffaf4;
+  border-radius: 10px;
+  border: 1px solid #e5d4c3;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Label chữ "Sắp xếp" */
+.sort-container label {
+  font-size: 1rem;
+  color: #6b3e26;
+  font-weight: 600;
+}
+
+/* Select dropdown */
+#sort-select {
+  padding: 10px 18px;
+  border: 1px solid #d8c3b1;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+/* Responsive cho sort-container */
+@media (max-width: 1024px) {
+  .sort-container {
+    width: 90%;
+    text-align: left;
+  }
+}
