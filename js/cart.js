@@ -179,3 +179,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+/////for payment 
+const ThanhToanButton = document.getElementById("checkout-btn")
+
+const PaymentImage = document.getElementById("payment")
+
+ThanhToanButton.addEventListener('click', function() {
+  
+  if (PaymentImage.style.display === 'none') {
+    
+    PaymentImage.style.display = 'block';
+  } else {
+    
+    PaymentImage.style.display = 'none';
+  }
+});
+//////////////////////////////////////////////////////////////
