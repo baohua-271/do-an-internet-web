@@ -56,14 +56,20 @@ main {
     font-size: 18px;
 }
 
-.checkout-btn {
+#checkout-btn {
     background-color: #d9534f;
     color: #fff;
     border: none;
     border-radius: 8px;
     padding: 12px 20px;
     font-size: 18px;
+  cursor: pointer;
+}
 
+#payment{
+  display: none;      
+  margin-left: auto;   
+  margin-right: 50px;
 }
 
 /* Hàng dưới: tổng tiền */
