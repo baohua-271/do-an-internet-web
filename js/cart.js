@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					<button class="qty-btn">+</button>
 				</div>
 				<button class="remove-btn">
-                	<img src="images/web-img/remove-btn.png" width="20" alt="Remove">
+                	<img src="images/image.png" width="20" alt="Remove">
 
                 </button>
 			</div>
