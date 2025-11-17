@@ -1,4 +1,4 @@
-// 📦 Khi trang load xong
+// Khi trang load xong
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const productId = parseInt(params.get("id")); // Lấy id từ URL
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // 📁 Đọc dữ liệu sản phẩm từ file JSON
+  // Đọc dữ liệu sản phẩm từ file JSON
   fetch("data/products.json")
     .then(response => response.json())
     .then(products => {
@@ -20,13 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // 🖼 Render chi tiết sản phẩm
+      //Render chi tiết sản phẩm
       displayProductDetail(product);
     })
     .catch(error => console.error("Lỗi tải dữ liệu:", error));
 });
 
-// 🎨 Hàm render thông tin chi tiết sản phẩm
+// Hàm render thông tin chi tiết sản phẩm
 function displayProductDetail(product) {
   const container = document.getElementById("product-detail-container");
 
@@ -47,4 +47,41 @@ function displayProductDetail(product) {
       </div>
     </div>
   `;
+
+  // Gắn sự kiện thêm vào giỏ hàng
+  const btn = container.querySelector('.add-to-cart-btn');
+  if (btn) {
+    btn.addEventListener('click', () => {
+      const item = {
+        id: product.id?.toString() || (product.name + '_' + Date.now()),
+        name: product.name,
+        price: product.price,
+        img: product.image,
+        qty: 1,
+      };
+      if (window.CartAPI && typeof window.CartAPI.addToCart === 'function') {
+        window.CartAPI.addToCart(item);
+        showToast('Đã thêm vào giỏ hàng');
+      } else {
+        alert('Không thể thêm vào giỏ hàng (CartAPI không sẵn sàng)');
+      }
+    });
+  }
+}
+
+// Simple toast notification
+function showToast(message) {
+  let t = document.createElement('div');
+  t.textContent = message;
+  t.style.position = 'fixed';
+  t.style.right = '20px';
+  t.style.bottom = '20px';
+  t.style.padding = '10px 14px';
+  t.style.background = 'rgba(0,0,0,0.8)';
+  t.style.color = '#fff';
+  t.style.borderRadius = '6px';
+  t.style.zIndex = 9999;
+  document.body.appendChild(t);
+  setTimeout(() => { t.style.opacity = '0'; }, 1500);
+  setTimeout(() => { t.remove(); }, 2000);
 }

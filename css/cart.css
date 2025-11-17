@@ -47,6 +47,15 @@ main {
 
 }
 
+.clear-cart-btn {
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 18px;
+}
+
 .checkout-btn {
     background-color: #d9534f;
     color: #fff;
