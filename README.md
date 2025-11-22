@@ -27,9 +27,9 @@ Website giúp người dùng có thể xem, tìm kiếm và tham khảo các s�
    - Lọc theo danh mục (bàn, ghế, tủ, giường...).  
    - Xem chi tiết sản phẩm (hình ảnh, mô tả, giá).  
 
-3. **Trang liên hệ/giới thiệu (Contact/About)**  
-   - Hiển thị thông tin liên hệ: địa chỉ, số điện thoại, email.  
-   - Form liên hệ để gửi phản hồi.
+3. **Trang giỏ hàng**  
+   - Hiển thị các sản phẩm đã thêm vào giỏ hàng.  
+   - Tính năng thanh toán.
   
 ---
 
