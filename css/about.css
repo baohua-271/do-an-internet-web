@@ -1,0 +1,151 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+  font-family: Arial, sans-serif;
+  min-height: 200vh;  
+  background: linear-gradient(to bottom, #f3f1ed, #eae4dc);
+ 
+}
+main {
+    margin-top: 60px;
+}
+/* Phần main */
+/* Khối Giới thiệu về Zhome */
+.first-main {
+    width: 80%;
+    margin: 50px;
+    background-color: #faf8f5; 
+    padding: 50px;
+    border-radius: 40px;
+    color: #3a3a3a; 
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    font-size: 30px;
+}
+
+/* chỉnh chữ "Chúng tôi là Zhome Việt Nam" */
+.first-main h1 {
+    color: #055e61;
+    font-size: 40px;
+    font-weight: 700;
+    border-bottom: 3px solid #c9a26b; 
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Đoạn văn cách đều, dễ đọc hơn */
+.first-main p {
+    margin-bottom: 15px;
+    text-indent: 30px;
+}
+
+/* Danh sách bullet đẹp hơn */
+.first-main ol {
+    margin-left: 30px;
+}
+
+.first-main li {
+    margin-bottom: 8px;
+}
+
+
+
+/*khối Thông tin chính sách */
+.last-main {
+    width: 80%;
+    margin: 50px 50px 50px auto;
+    background-color: #faf8f5; 
+    padding: 50px;
+
+    border-radius: 40px;
+    color: #3a3a3a; 
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* đổ bóng nhẹ để nổi khối */
+    font-size: 30px;
+}
+
+/* chỉnh chữ "thông tin chính sách" to hơn đẹp hơn*/
+.last-main h1 {
+    color: #055e61;
+    font-size: 40px;
+    font-weight: 700;
+    border-bottom: 3px solid #c9a26b; 
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* chỉnh các phần tiêu đề to hơn*/
+.last-main h3, h4, h5 {
+    color: #055e61;
+    font-size: 25px;
+    font-weight: 700;
+    border-bottom: 3px solid #c9a26b; 
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Đoạn văn cách đều, dễ đọc hơn */
+.last-main p {
+    margin-bottom: 15px;
+}
+
+/* Danh sách bullet đẹp hơn */
+.last-main ul {
+    margin-left: 30px;
+}
+
+.last-main li {
+    margin-bottom: 8px;
+}
+
+/* Chỉnh thụt vào 1 tab */
+ul, ol {
+  margin-left: 40px;
+  line-height: 1.5;
+}
+
+
+/* ===== Phần giới thiệu thành viên ===== */
+.team {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #faf8f5; 
+}
+
+.team h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.member {
+  width: 250px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.member:hover {
+  transform: translateY(-8px);
+}
+
+.member img {
+  width: 120px;           /* Kích thước cố định cho avatar */
+  height: 120px;          
+  border-radius: 50%;     
+  object-fit: cover;      /* Giúp ảnh không bị méo */
+  margin-bottom: 15px;
+  border: 3px solid #eee; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;     
+}
+
