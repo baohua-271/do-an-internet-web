@@ -13,7 +13,7 @@ header{
 }
 
 
-/* ===== Phần banner ===== */
+/* ===== BANNER ===== */
 .banner {
   position: absolute;
   bottom: 0;
@@ -69,7 +69,7 @@ header{
 }
 
 
-/* ===== Phần main ===== */
+/* ===== Main ===== */
 main { 
   padding: 20px;
   text-align: center;
@@ -153,10 +153,10 @@ main {
     flex-wrap: wrap; 
     width: 80%; 
     height: 250px;
-    margin: 0 auto; /* **Căn giữa container** */
+    margin: 0 auto; 
     background-color: white;
     border: 1px solid #ddd;
-    min-height: 150px; /* Đặt chiều cao tối thiểu để cân đối hơn */
+    min-height: 150px; 
     margin-top: 40px;
     margin-bottom: 40px;
 }
@@ -164,8 +164,8 @@ main {
 /* Item dịch vụ - Tăng padding để làm cho item cao hơn */
 .service-item {
     flex: 1 1 25%;
-    min-width: 220px; /* Tăng min-width để nội dung rộng rãi hơn */
-    padding: 40px 15px; /* **ĐÃ THAY ĐỔI: Tăng padding dọc** */
+    min-width: 220px;
+    padding: 40px 15px; 
     text-align: center;
     border-right: 1px solid #eee;
     box-sizing: border-box;
@@ -174,7 +174,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.3s; /* Thêm hiệu ứng hover nhẹ */
+    transition: background-color 0.3s; 
 }
 
 /* Hiệu ứng hover cho item */
@@ -190,13 +190,13 @@ main {
 /* Icon - Tăng kích thước */
 .icon {
     position: relative;
-    color: #333; /* Màu icon đậm hơn */
-    margin-bottom: 15px; /* Tăng khoảng cách dưới icon */
+    color: #333; 
+    margin-bottom: 15px; 
     line-height: 1; 
 }
 
 .icon svg {
-    width: 40px; /* **ĐÃ THAY ĐỔI: Tăng kích thước icon** */
+    width: 40px; 
     height: 40px;
     stroke-width: 1.5;
 }
@@ -204,7 +204,7 @@ main {
 /* Badge (số 1/1 và 24/7) - Tinh chỉnh vị trí và font cho icon lớn hơn */
 .badge {
     position: absolute;
-    font-size: 11px; /* Tăng font badge */
+    font-size: 11px; 
     font-weight: bold;
     color: #444;
     /* Tinh chỉnh vị trí cho "1 / 1" */
@@ -214,7 +214,7 @@ main {
 
 .badge-247 {
     position: absolute;
-    font-size: 10px; /* Tăng font badge */
+    font-size: 10px; 
     font-weight: bold;
     color: #444;
     /* Tinh chỉnh vị trí cho "24 / 7" */
@@ -227,20 +227,20 @@ main {
 
 /* Tiêu đề chính - Tăng kích thước font */
 .title {
-    font-size: 17px; /* **ĐÃ THAY ĐỔI: Tăng kích thước font** */
-    font-weight: 600; /* Làm tiêu đề đậm hơn */
+    font-size: 17px; 
+    font-weight: 600; 
     color: #222;
     margin-top: 5px;
 }
 
 /* Tiêu đề phụ (Miễn Phí) - Tăng kích thước font */
 .subtitle {
-    font-size: 14px; /* **ĐÃ THAY ĐỔI: Tăng kích thước font** */
+    font-size: 14px; 
     color: #888;
     margin-top: 5px;
 }
 
-/* --- RESPONSIVE DESIGN --- */
+/* ===== RESPONSIVE DESIGN ===== */
 
 /* Màn hình từ 992px trở xuống (2 cột) */
 @media (max-width: 992px) {
@@ -278,7 +278,7 @@ main {
         flex: 1 1 100%; /* 1 item trên 1 hàng (100%) */
         border-right: none !important; 
         border-bottom: 1px solid #eee;
-        padding: 25px 10px; /* Giảm padding cho điện thoại */
+        padding: 25px 10px; 
     }
 
     /* Loại bỏ border-bottom cho item cuối cùng */

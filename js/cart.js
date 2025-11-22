@@ -42,8 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		if (totalEl) totalEl.textContent = `TỔNG TIỀN: ${formatPrice(total)}`;
 	}
 
-	// We intentionally DO NOT extract static items from the HTML to seed the cart.
-	// Start empty unless there is saved data in localStorage / CartAPI.
+
 
 	function createItemElement(item) {
 		const li = document.createElement('li');
@@ -155,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		updateTotal();
 	}
 
-	// Re-render when CartAPI dispatches updates (e.g., from product pages)
+	// Re-render when CartAPI dispatches updates
 	window.addEventListener('cartUpdated', (e) => {
 		const cart = e?.detail?.cart || getStoredCart();
 		renderCart(cart);
@@ -179,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-/////for payment 
+// Payment
 const ThanhToanButton = document.getElementById("checkout-btn")
 
 const PaymentImage = document.getElementById("payment")
@@ -194,4 +193,3 @@ ThanhToanButton.addEventListener('click', function() {
     PaymentImage.style.display = 'none';
   }
 });
-//////////////////////////////////////////////////////////////

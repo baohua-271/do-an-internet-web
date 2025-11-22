@@ -17,10 +17,10 @@ main {
     background-color: #faf8f5; 
     padding: 50px;
     border-radius: 40px;
-    color: #3a3a3a; /* Màu chữ xám đậm, dễ đọc hơn đen */
+    color: #3a3a3a; 
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.8;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* đổ bóng nhẹ để nổi khối */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
     font-size: 30px;
 }
 
@@ -59,7 +59,7 @@ main {
     padding: 50px;
 
     border-radius: 40px;
-    color: #3a3a3a; /* Màu chữ xám đậm, dễ đọc hơn đen */
+    color: #3a3a3a; 
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.8;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* đổ bóng nhẹ để nổi khối */

@@ -1,5 +1,3 @@
-
-/*---------------------------------- thanh ngay dưới nav bar---------------------------------- */
 main {
   margin: 40px;
 }
@@ -55,7 +53,6 @@ main {
     padding: 12px 20px;
     font-size: 18px;
 }
-/* --------------------------------------------------- */
 #checkout-btn {
     background-color: #d9534f;
     color: #fff;
@@ -72,8 +69,6 @@ main {
   margin-right: 50px;
 }
 
-/* ----------------------------------------------------- */
-/* Hàng dưới: tổng tiền */
 .total {
   font-weight: bold;
   color: #000;
@@ -81,19 +76,12 @@ main {
   font-size: 18px;
 }
 
-
-/*---------------------------------------------------------------------------------------------*/
-
-
-
-/*-------------------------------------------- sản phẩm -------------------------------------- */
-
 .cart-list{
   list-style: none;
   padding: 0;
   margin: 0;   
-  flex-direction: column;   /* xếp dọc các sản phẩm */
-  align-items: center;      /* căn giữa ngang */
+  flex-direction: column;   
+  align-items: center;      
 }
 
 
@@ -155,9 +143,7 @@ main {
   font-weight: 600;
   font-size: 16px;
 }
-/*-------------------*/
 
-/* nút xóa*/
 .remove-btn {
   display: flex;
   border: none;
@@ -171,17 +157,15 @@ main {
 }
 
 
-
 .item-info {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 10px; /* khoảng cách nhỏ giữa tên và giá */
+  gap: 10px; 
   flex: 1; 
   margin-left: 20px;
 }
 
-/* Tên sản phẩm */
 .item-name {
   font-size: 24px;
   font-weight: 1000;
@@ -192,21 +176,12 @@ main {
 /* Giá sản phẩm */
 .item-price {
   margin: 0;
-  color: #555; /* chữ “Giá:” */
+  color: #555; 
   font-weight: 500;
 }
 
 .item-price span {
-  color: #b22222; /* màu giá tiền */
+  color: #b22222; 
   font-weight: 600;
 }
 
-/*---------------------------------------------------------------------------------------------*/
-
-footer {
-    background: #d2b48c; /* beige */
-    padding: 15px 0; 
-    text-align: center;
-    color: #000;
-    margin-top: 20px;
-}
