@@ -37,10 +37,10 @@
         </ul>
       </div>
       <div class="nav-right">
-        <div class="search-bar" id="searchForm">
-          <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm . . .">
+        <form class="search-bar" id="search-form">
+          <input type="search" id="search-input" placeholder="Tìm kiếm sản phẩm . . .">
             <button type="submit"><i class="fa fa-search"></i></button>
-        </div>
+        </form>
         <div class="cart">
           <i class="fa fa-shopping-cart"></i>
           <a href="cart.html"> Giỏ hàng</a>
@@ -60,15 +60,15 @@
 
 <main>
   <h1 id="category-title"></h1>
-
+    <!-- SORT BY -->
   <div class="sort-container">
-    <label for="sort-select">Sắp xếp theo:</label>
-    <select id="sort-select">
-      <option value="default">Mặc định</option>
-      <option value="price-asc">Giá: Thấp đến Cao</option>
-      <option value="price-desc">Giá: Cao đến Thấp</option>
-    </select>
-   </div>
+    <label for="sort">Sắp xếp theo:</label>
+    <select id="sort">
+      <option value="default">Mặc định</option>
+      <option value="priceAsc">Giá tăng dần</option>
+      <option value="priceDesc">Giá giảm dần</option>
+    </select>
+  </div>
 
   <div id="product-list" class="product-list"></div>
 </main>
@@ -137,6 +137,7 @@
   <script src="js/products.js"></script>
   <script src="js/nav.js"></script>
   <script src="js/breadcrumb.js"></script>
+  <script src="js/search.js"></script>
 
 </body>
 </html>
