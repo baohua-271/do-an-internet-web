@@ -100,11 +100,7 @@ main {
     margin-bottom: 8px;
 }
 
-/* Chỉnh thụt vào 1 tab */
-ul, ol {
-  margin-left: 40px;
-  line-height: 1.5;
-}
+
 
 
 /* ===== Phần giới thiệu thành viên ===== */
