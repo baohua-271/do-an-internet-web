@@ -1,165 +1,46 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Lấy tham số từ URL, ví dụ ?category=bedroom: để biết người dùng muốn xem danh mục nào
-  const params = new URLSearchParams(window.location.search); // đọc URL
-  const category = params.get("category"); // lấy chuỗi: giá trị của category trong data
+// Định nghĩa các hằng số (Constants)
+const TITLE_MAP = {
+  bedroom: "Sản phẩm Phòng ngủ",
+  livingroom: "Sản phẩm Phòng khách",
+  diningroom: "Sản phẩm Phòng ăn",
+  office: "Sản phẩm Phòng làm việc",
+};
 
-  // Đọc dữ liệu sản phẩm
-  fetch("data/products.json") // gửi yêu cầu HTTP GET tới file data
-    .then(res => res.json()) // chuyển đổi dữ liệu đã lấy thành công
-    .then(products => {
-      const filtered = category
-        ? products.filter(p => p.category === category)
-        : products;
-
-      // Cập nhật tiêu đề trang
-      const titleMap = { 
-        // bảng ánh xạ
-        bedroom: "Sản phẩm Phòng ngủ",
-        livingroom: "Sản phẩm Phòng khách",
-        diningroom: "Sản phẩm Phòng ăn",
-        office: "Sản phẩm Phòng làm việc",
-      };
-      document.getElementById("category-title").textContent =
-        titleMap[category] || "Tất cả sản phẩm";
-
-      renderProducts(filtered); // tạo và hiển thị giao diện HTML cho các sản phẩm đã lọc
-    })
-    .catch(err => console.error("Lỗi tải dữ liệu:", err));
-});
-
-function renderProducts(list) {
-  const container = document.getElementById("product-list"); // ánh xạ tới nơi có id: product-list trong html để bỏ dữ liệu vào
-  container.innerHTML = "";
-  
-  if (list.length === 0) {
-	// nếu không có sản phẩm nào trong chủ đề
-    container.innerHTML = "<p>Không có sản phẩm nào trong danh mục này.</p>";
-    return;
-  }
-
-  list.forEach(p => {
-	// nếu có sản phẩm
-    const item = document.createElement("div"); // tạo div cho từng sản phẩm
-    item.classList.add("product");
-	// thiết lập để ứng dụng css
-    item.innerHTML = `
-      <img src="${p.image}" alt="${p.name}">
-      <h3>${p.name}</h3>
-      <p class="price">${p.price.toLocaleString()}đ</p>
-      <button class="detail-btn">Xem chi tiết</button>
-    `;
-	// Khi ấn vào "Xem chi tiết" sẽ đẩy đến trang product-detail.html
-    item.querySelector(".detail-btn").addEventListener("click", () => {
-      window.location.href = `product-detail.html?id=${p.id}`;
-    });
-
-    container.appendChild(item);
-  });
-}
-
-
-
-// Lấy category từ URL
-const params = new URLSearchParams(window.location.search);
-const category = params.get("category");
-
-// Định nghĩa ảnh banner cho từng category
-const bannerImages = {
+const BANNER_IMAGES = {
   bedroom: "images/banners/bedroom-banner.jpg",
   livingroom: "images/banners/livingroom-banner.jpg",
   diningroom: "images/banners/diningroom-banner.jpg",
   office: "images/banners/office-banner.jpg",
-  default: "images/banners/products-banner.jpg" // ảnh mặc định khi không chọn category
+  default: "images/banners/products-banner.jpg",
 };
 
-// Định nghĩa tiêu đề cho từng category
-const bannerTitles = {
+const BANNER_TITLES = {
   bedroom: "Nội thất phòng ngủ",
   livingroom: "Nội thất phòng khách",
   diningroom: "Nội thất phòng ăn",
   office: "Nội thất phòng làm việc",
-  default: "Sản phẩm Zhome" // tiêu đề mặc định
+  default: "Sản phẩm Zhome",
 };
 
-// Lấy phần tử banner
-const banner = document.getElementById("page-banner");
-
-// Xác định category hợp lệ hay dùng default
-const activeCategory = category && bannerImages[category] ? category : "default";
-
-// Gán ảnh và tiêu đề
-banner.style.backgroundImage = `url(${bannerImages[activeCategory]})`;
-banner.innerHTML = `<h2 class="banner-title">${bannerTitles[activeCategory]}</h2>`;
-banner.style.display = "block";
-
-
-
-//===== HIỂN THỊ SẢN PHẨM KHI TÌM KIẾM =====
-
-document.addEventListener("DOMContentLoaded", async () => {
-  const params = new URLSearchParams(window.location.search);
-  const category = params.get("category"); // filter theo category
-  const type = params.get("type");         // filter theo type
-
-  try {
-    const res = await fetch("data/products.json");
-    const products = await res.json();
-
-    let filtered = products;
-
-    // Lọc theo category
-    if (category) {
-      filtered = filtered.filter(p => p.category === category);
-    }
-
-    // Lọc theo type
-    if (type) {
-      filtered = filtered.filter(p => p.type.toLowerCase() === type.toLowerCase());
-    }
-
-
-    // Cập nhật tiêu đề trang
-    const titleEl = document.getElementById("category-title");
-    if (type) {
-      titleEl.textContent = `Sản phẩm loại "${type}"`;
-    } else if (category) {
-      const titleMap = {
-        bedroom: "Sản phẩm Phòng ngủ",
-        livingroom: "Sản phẩm Phòng khách",
-        diningroom: "Sản phẩm Phòng ăn",
-        office: "Sản phẩm Phòng làm việc"
-      };
-      titleEl.textContent = titleMap[category] || "Tất cả sản phẩm";
-    } else {
-      titleEl.textContent = "Tất cả sản phẩm";
-    }
-
-    renderProducts(filtered);
-
-  } catch (err) {
-    console.error("Lỗi tải sản phẩm:", err);
-  }
-});
-
-// Hàm render sản phẩm
+// Hàm hiển thị sản phẩm
 function renderProducts(list) {
   const container = document.getElementById("product-list");
-  container.innerHTML = "";
+  container.innerHTML = ""; // Xóa nội dung cũ
 
   if (!list || list.length === 0) {
     container.innerHTML = "<p>Không có sản phẩm nào phù hợp.</p>";
     return;
   }
 
-  list.forEach(p => {
+  list.forEach((p) => {
     const item = document.createElement("div");
     item.classList.add("product");
     item.innerHTML = `
-      <img src="${p.image}" alt="${p.name}">
-      <h3>${p.name}</h3>
-      <p class="price">${p.price.toLocaleString()}₫</p>
-      <button class="detail-btn">Xem chi tiết</button>
-    `;
+            <img src="${p.image}" alt="${p.name}">
+            <h3>${p.name}</h3>
+            <p class="price">${p.price.toLocaleString()}đ</p>
+            <button class="detail-btn">Xem chi tiết</button>
+        `;
 
     item.querySelector(".detail-btn").addEventListener("click", () => {
       window.location.href = `product-detail.html?id=${p.id}`;
@@ -169,42 +50,89 @@ function renderProducts(list) {
   });
 }
 
-//CHỨC NĂNG SORT
-document.getElementById("sort").addEventListener("change", async function () {
-  const sortType = this.value;
-
-  // Lấy lại tham số URL (category & type)
+// Hàm lấy và Lọc Dữ Liệu
+async function getFilteredProducts() {
   const params = new URLSearchParams(window.location.search);
   const category = params.get("category");
   const type = params.get("type");
 
-  // Load dữ liệu
   const res = await fetch("data/products.json");
   let products = await res.json();
 
   // Lọc theo category
   if (category) {
-    products = products.filter(p => p.category === category);
+    products = products.filter((p) => p.category === category);
   }
 
   // Lọc theo type
   if (type) {
-    products = products.filter(p => p.type.toLowerCase() === type.toLowerCase());
+    products = products.filter(
+      (p) => p.type.toLowerCase() === type.toLowerCase()
+    );
   }
 
-  // ===== SORT =====
-  let sorted = [...products];
+  return { filteredProducts: products, category, type };
+}
 
-  if (sortType === "priceAsc") {
-    sorted.sort((a, b) => a.price - b.price);
+// Hàm Xử Lý Banner và Tiêu Đề
+function updatePageInfo(category, type) {
+  // Cập nhật Tiêu đề trang
+  const titleEl = document.getElementById("category-title");
+  if (type) {
+    titleEl.textContent = `Sản phẩm loại "${type}"`;
+  } else if (category) {
+    titleEl.textContent = TITLE_MAP[category] || "Tất cả sản phẩm";
+  } else {
+    titleEl.textContent = "Tất cả sản phẩm";
   }
 
-  if (sortType === "priceDesc") {
-    sorted.sort((a, b) => b.price - a.price);
+  // Cập nhật Banner
+  const banner = document.getElementById("page-banner");
+  const activeCategory =
+    category && BANNER_IMAGES[category] ? category : "default";
+
+  banner.style.backgroundImage = `url(${BANNER_IMAGES[activeCategory]})`;
+  banner.innerHTML = `<h2 class="banner-title">${BANNER_TITLES[activeCategory]}</h2>`;
+  banner.style.display = "block";
+}
+
+// Khối Khởi Tạo Chính
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    // Lấy và lọc sản phẩm ban đầu
+    const { filteredProducts, category, type } = await getFilteredProducts();
+
+    // Cập nhật thông tin trang
+    updatePageInfo(category, type);
+
+    // Hiển thị sản phẩm
+    renderProducts(filteredProducts);
+  } catch (err) {
+    console.error("Lỗi khởi tạo trang sản phẩm:", err);
+    document.getElementById("category-title").textContent = "Lỗi tải dữ liệu";
   }
+});
 
-  // sortType = default → giữ nguyên products
+// Chức năng Sort
+document.getElementById("sort").addEventListener("change", async function () {
+  const sortType = this.value;
 
-  // Hiển thị lại
-  renderProducts(sorted);
+  try {
+    // Lấy lại danh sách sản phẩm đã được lọc (dựa trên URL)
+    const { filteredProducts: products } = await getFilteredProducts();
+
+    // Sao chép và sắp xếp
+    let sorted = [...products];
+
+    if (sortType === "priceAsc") {
+      sorted.sort((a, b) => a.price - b.price);
+    } else if (sortType === "priceDesc") {
+      sorted.sort((a, b) => b.price - a.price);
+    }
+
+    // Hiển thị lại
+    renderProducts(sorted);
+  } catch (err) {
+    console.error("Lỗi sắp xếp sản phẩm:", err);
+  }
 });

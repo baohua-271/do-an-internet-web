@@ -1,8 +1,7 @@
 /* Toàn bộ trang căn giữa */
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #f2f2f2, #e8e8e8);
-
+  background: linear-gradient(to bottom, #f3f1ed, #eae4dc);
 }
 
 .login-container {
@@ -11,15 +10,13 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-
-
 }
 /* Hộp login */
 .login-box {
   background: #fff;
   padding: 40px 50px;
   border-radius: 16px;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
   width: 360px;
   text-align: center;
   font-size: 15px;
@@ -35,7 +32,6 @@ body {
 .input-group {
   position: relative;
   margin-bottom: 20px;
-  
 }
 
 .input-group i {
@@ -57,7 +53,7 @@ body {
 
 .input-group input:focus {
   border-color: #0077cc;
-  box-shadow: 0 0 0 3px rgba(0,119,204,0.1);
+  box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.1);
 }
 
 /* Nút đăng nhập */
