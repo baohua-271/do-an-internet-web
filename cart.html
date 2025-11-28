@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
-    <link rel="stylesheet" href="css/cart.css">
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/breadcrumb.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-</head>
-<body>
+    <link rel="stylesheet" href="src/css/cart.css" />
+    <link rel="stylesheet" href="src/css/nav.css" />
+    <link rel="stylesheet" href="src/css/breadcrumb.css" />
+    <link rel="stylesheet" href="src/css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
     <!-- Thanh điều hướng (Navigation) -->
     <nav class="navbar">
       <div class="nav-left">
         <a href="index.html" class="brand">
-          <img src="images/logo8 - Copy.jfif" alt="Zhome logo" class="logo">
+          <img src="images/logo8 - Copy.jfif" alt="Zhome logo" class="logo" />
           <strong>Zhome</strong>
         </a>
       </div>
@@ -26,9 +28,13 @@
             <a href="products.html">Sản phẩm</a>
             <ul class="dropdown-menu">
               <li><a href="products.html?category=bedroom">Phòng ngủ</a></li>
-              <li><a href="products.html?category=livingroom">Phòng khách</a></li>
+              <li>
+                <a href="products.html?category=livingroom">Phòng khách</a>
+              </li>
               <li><a href="products.html?category=diningroom">Phòng ăn</a></li>
-              <li><a href="products.html?category=office">Phòng làm việc</a></li>
+              <li>
+                <a href="products.html?category=office">Phòng làm việc</a>
+              </li>
             </ul>
           </li>
           <li><a href="#">Khuyến mãi</a></li>
@@ -38,8 +44,8 @@
       </div>
       <div class="nav-right">
         <div class="search-bar">
-          <input type="text" placeholder="Tìm kiếm sản phẩm . . .">
-            <button><i class="fa fa-search"></i></button>
+          <input type="text" placeholder="Tìm kiếm sản phẩm . . ." />
+          <button><i class="fa fa-search"></i></button>
         </div>
         <div class="cart">
           <i class="fa fa-shopping-cart"></i>
@@ -47,98 +53,102 @@
         </div>
         <div class="login">
           <i class="fa fa-user"></i>
-          <a href="login.html"> Đăng nhập / </a> <a href="register.html"> Đăng ký</a>
+          <a href="login.html"> Đăng nhập / </a>
+          <a href="register.html"> Đăng ký</a>
         </div>
       </div>
     </nav>
 
-<nav class="breadcrumb" id="breadcrumb"></nav>
+    <nav class="breadcrumb" id="breadcrumb"></nav>
 
-<main>
-<div class="cart-bar">
-  <div class="cart-left">
-    <span> GIỎ HÀNG</span>
-  </div>
+    <main>
+      <div class="cart-bar">
+        <div class="cart-left">
+          <span> GIỎ HÀNG</span>
+        </div>
 
-  <div class="cart-right">
-    <div class="cart-buttons">
-      <button class="discount-btn">MÃ GIẢM GIÁ</button>
-      <button class="clear-cart-btn">XÓA TOÀN BỘ GIỎ HÀNG</button>
-      <button id="checkout-btn">THANH TOÁN</button>
-    </div>
-    <span class="total">TỔNG TIỀN:</span>
-  </div>
-</div>
-<img id="payment" src="images/Rick_Roll_QR.png" width="200px" height="auto"> 
-<!------------------------------ Header: Logo + tiêu đề ---------------------------------------->
-<ul class="cart-list"></ul>
-</main>
+        <div class="cart-right">
+          <div class="cart-buttons">
+            <button class="discount-btn">MÃ GIẢM GIÁ</button>
+            <button class="clear-cart-btn">XÓA TOÀN BỘ GIỎ HÀNG</button>
+            <button id="checkout-btn">THANH TOÁN</button>
+          </div>
+          <span class="total">TỔNG TIỀN:</span>
+        </div>
+      </div>
+      src/<img
+        id="payment"
+        src="images/Rick_Roll_QR.png"
+        width="200px"
+        height="auto"
+      />
+      <!------------------------------ Header: Logo + tiêu đề ---------------------------------------->
+      <ul class="cart-list"></ul>
+    </main>
 
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Cột 1: Giới thiệu thương hiệu -->
+        <div class="footer-column">
+          <h3>NỘI THẤT ZHOME</h3>
+          <p>
+            ZHome mang đến các sản phẩm nội thất hiện đại, tinh tế và phù hợp
+            cho mọi không gian sống. Chúng tôi cam kết mang đến chất lượng và
+            dịch vụ tốt nhất cho khách hàng.
+          </p>
+        </div>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="footer-container">
+        <!-- Cột 2: Thông tin chính sách -->
+        <div class="footer-column">
+          <h3>THÔNG TIN CHÍNH SÁCH</h3>
+          <ul>
+            <li><a href="about.html">Chính sách bán hàng</a></li>
+            <li><a href="about.html">Chính sách đổi trả</a></li>
+            <li><a href="about.html">Chính sách bảo hành</a></li>
+            <li><a href="about.html">Chính sách bảo mật</a></li>
+          </ul>
+        </div>
 
-    <!-- Cột 1: Giới thiệu thương hiệu -->
-    <div class="footer-column">
-      <h3>NỘI THẤT ZHOME</h3>
-      <p>
-        ZHome mang đến các sản phẩm nội thất hiện đại, tinh tế và phù hợp cho mọi không gian sống.
-        Chúng tôi cam kết mang đến chất lượng và dịch vụ tốt nhất cho khách hàng.
-      </p>
-    </div>
+        <!-- Cột 3: Thông tin liên hệ -->
+        <div class="footer-column">
+          <h3>LIÊN HỆ</h3>
+          <p>Hotline: 0909 123 456</p>
+          <p>Email: zhome.contact@gmail.com</p>
+          <p>Địa chỉ: 123 Lê Lợi, Quận 1, TP.HCM</p>
+        </div>
 
-    <!-- Cột 2: Thông tin chính sách -->
-    <div class="footer-column">
-      <h3>THÔNG TIN CHÍNH SÁCH</h3>
-      <ul>
-        <li><a href="about.html">Chính sách bán hàng</a></li>
-        <li><a href="about.html">Chính sách đổi trả</a></li>
-        <li><a href="about.html">Chính sách bảo hành</a></li>
-        <li><a href="about.html">Chính sách bảo mật</a></li>
-      </ul>
-    </div>
-
-    <!-- Cột 3: Thông tin liên hệ -->
-    <div class="footer-column">
-      <h3>LIÊN HỆ</h3>
-      <p>Hotline: 0909 123 456</p>
-      <p>Email: zhome.contact@gmail.com</p>
-      <p>Địa chỉ: 123 Lê Lợi, Quận 1, TP.HCM</p>
-    </div>
-
-    <!-- Cột 4: Fanpage -->
-    <div class="footer-column">
-      <h3>FANPAGE</h3>
-      <div class="fanpage-box">
-       <iframe
-         src="https://www.facebook.com/plugins/page.php?
+        <!-- Cột 4: Fanpage -->
+        <div class="footer-column">
+          <h3>FANPAGE</h3>
+          <div class="fanpage-box">
+            <iframe
+              src="https://www.facebook.com/plugins/page.php?
           href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61583227545841%26locale%3Dvi_VN&
           tabs=timeline&width=280&height=130&small_header=true&
           adapt_container_width=true&hide_cover=false&show_facepile=true"
-          width="100%"
-          height="130"
-          style="border:none; overflow:hidden"
-          scrolling="no"
-          frameborder="0"
-          allowfullscreen="true"
-          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-        </iframe>
+              width="100%"
+              height="130"
+              style="border: none; overflow: hidden"
+              scrolling="no"
+              frameborder="0"
+              allowfullscreen="true"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            >
+            </iframe>
+          </div>
+        </div>
       </div>
-    </div>
 
-  </div>
+      <!-- Bản quyền -->
+      <div class="footer-bottom">
+        <p>© 2025 ZHome Furniture. All rights reserved.</p>
+      </div>
+    </footer>
 
-  <!-- Bản quyền -->
-  <div class="footer-bottom">
-    <p>© 2025 ZHome Furniture. All rights reserved.</p>
-  </div>
-</footer>  
-    
-    
-    <script src="js/breadcrumb.js"></script>
-    <script src="js/nav.js"></script>
-    <script src="js/cart-api.js"></script>
-    <script src="js/cart.js"></script>
-</body>
+    <script src="src/js/breadcrumb.js"></script>
+    <script src="src/js/nav.js"></script>
+    <script src="src/js/cart-api.js"></script>
+    <script src="src/js/cart.js"></script>
+  </body>
 </html>
