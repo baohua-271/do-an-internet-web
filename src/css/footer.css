@@ -1,16 +1,17 @@
 /* Footer tổng thể */
 .footer {
-  background-color: #fffaf4;       
-  color: black;                  
+  background-color: #fffaf4;
+  color: black;
   padding: 40px 0 20px;
   font-family: "Arial", sans-serif;
   margin: 0 auto;
+  width: 100%;
 }
 
 /* Chia layout 4 cột */
 .footer-container {
   display: flex;
-  flex-wrap: wrap;             /* Cho responsive khi thu nhỏ */
+  flex-wrap: wrap; /* Cho responsive khi thu nhỏ */
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
@@ -20,13 +21,13 @@
 
 /* Mỗi cột footer */
 .footer-column {
-  flex: 1 1 250px;             /* Co giãn đều giữa các cột */
+  flex: 1 1 250px; /* Co giãn đều giữa các cột */
   min-width: 200px;
 }
 
 .footer-column h3 {
   font-size: 18px;
-  color: black;              
+  color: black;
   margin-bottom: 15px;
 }
 
@@ -53,7 +54,7 @@
 }
 
 .footer-column ul li a:hover {
-  color: #00BFFF; /* xanh trời */
+  color: #00bfff; /* xanh trời */
 }
 
 /* Fanpage */

@@ -1,3 +1,6 @@
+body {
+  background: linear-gradient(to bottom, #f3f1ed, #eae4dc);
+}
 /* Toàn bộ layout chi tiết sản phẩm */
 .product-detail {
   display: flex;
@@ -11,7 +14,7 @@
 .image-section img {
   width: 400px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Thông tin sản phẩm */
