@@ -70,6 +70,7 @@
         <i class="fa fa-bars"></i>
       </div>
     </nav>
+
     <nav class="breadcrumb" id="breadcrumb"></nav>
 
     <main>
@@ -87,14 +88,20 @@
           <span class="total">TỔNG TIỀN:</span>
         </div>
       </div>
-      <img
-        id="payment"
-        src="images/Rick_Roll_QR.png"
-        width="200px"
-        height="auto"
-      />
+
       <!------------------------------ Header: Logo + tiêu đề ---------------------------------------->
       <ul class="cart-list"></ul>
+
+      <div id="payment-box">
+        <h3>Thanh toán đơn hàng</h3>
+        <p class="pay-info">Số lượng sản phẩm: <span id="pay-qty">0</span></p>
+        <p class="pay-info">Tổng thanh toán: <span id="pay-total">0đ</span></p>
+        <img
+          src="images/Rick_Roll_QR.png"
+          id="payment-qr"
+          alt="QR Thanh toán"
+        />
+      </div>
     </main>
 
     <!-- Footer -->

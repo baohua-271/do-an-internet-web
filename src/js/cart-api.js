@@ -1,9 +1,9 @@
 (function () {
-  const STORAGE_KEY = 'cart';
+  const STORAGE_KEY = "cart";
 
   function getCart() {
     try {
-      return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
     } catch (e) {
       return [];
     }
@@ -11,11 +11,11 @@
 
   function saveCart(cart) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
-    window.dispatchEvent(new CustomEvent('cartUpdated', { detail: { cart } }));
+    window.dispatchEvent(new CustomEvent("cartUpdated", { detail: { cart } }));
   }
 
   function findIndexById(cart, id) {
-    return cart.findIndex(i => i.id === id);
+    return cart.findIndex((i) => i.id === id);
   }
 
   function addToCart(item) {
@@ -26,9 +26,9 @@
     } else {
       cart.push({
         id: item.id,
-        name: item.name || '',
+        name: item.name || "",
         price: item.price || 0,
-        img: item.img || '',
+        img: item.img || "",
         qty: item.qty || 1,
       });
     }
@@ -48,13 +48,15 @@
   }
 
   function removeItem(id) {
-    const cart = getCart().filter(i => i.id !== id);
+    const cart = getCart().filter((i) => i.id !== id);
     saveCart(cart);
   }
 
   function clearCart() {
     localStorage.removeItem(STORAGE_KEY);
-    window.dispatchEvent(new CustomEvent('cartUpdated', { detail: { cart: [] } }));
+    window.dispatchEvent(
+      new CustomEvent("cartUpdated", { detail: { cart: [] } })
+    );
   }
 
   window.CartAPI = {

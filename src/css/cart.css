@@ -1,20 +1,14 @@
 html,
 body {
-  height: 100%;
-  margin: 0;
-}
-body {
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(to bottom, #f3f1ed, #eae4dc);
   font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #f3f1ed, #eae4dc);
 }
+
 main {
   margin: 40px auto;
-
+  min-height: calc(100vh - 200px);
   width: 95%;
   padding: 0 20px;
-  flex-grow: 1;
 }
 
 /* ===== CSS CHO NỘI DUNG MAIN =====*/
@@ -138,7 +132,7 @@ button {
 .item-control {
   display: flex;
   align-items: center;
-  gap: 12px; /* khoảng cách giữa nút xóa và phần số lượng */
+  gap: 12px;
 }
 
 .quantity-control {
@@ -208,4 +202,60 @@ button {
 .item-price span {
   color: #a0522d;
   font-weight: 600;
+}
+
+/* ===== POPUP THANH TOÁN QR ===== */
+#payment-box {
+  position: fixed;
+  top: 340px;
+  right: 30px;
+  background: #fff7ed;
+  padding: 18px;
+  border-radius: 14px;
+  width: 330px;
+  display: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 0.35s ease;
+}
+#payment-box.show {
+  display: block;
+}
+
+#payment-box h3 {
+  color: #6b3e26;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.pay-info {
+  font-size: 15px;
+  margin: 6px 0;
+  font-weight: 600;
+}
+/* QR thanh toán */
+#payment-box img {
+  width: 80%;
+  border-radius: 10px;
+  margin: 10px auto;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #payment-box {
+    width: 90%;
+    right: 5%;
+    bottom: 10px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
