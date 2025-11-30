@@ -44,23 +44,31 @@
         </ul>
       </div>
       <div class="nav-right">
-        <div class="search-bar" id="searchForm">
+        <form class="search-bar" id="search-form">
           <input
-            type="text"
-            id="searchInput"
+            type="search"
+            id="search-input"
             placeholder="Tìm kiếm sản phẩm . . ."
           />
           <button type="submit"><i class="fa fa-search"></i></button>
-        </div>
+        </form>
         <div class="cart">
-          <i class="fa fa-shopping-cart"></i>
-          <a href="cart.html"> Giỏ hàng</a>
+          <a href="cart.html">
+            <i class="fa fa-shopping-cart"></i>
+            <span>Giỏ hàng</span>
+          </a>
         </div>
         <div class="login">
-          <i class="fa fa-user"></i>
-          <a href="login.html"> Đăng nhập / </a>
-          <a href="register.html"> Đăng ký</a>
+          <a href="login.html">
+            <i class="fa fa-user"></i>
+            <span>Đăng nhập /</span>
+          </a>
+          <a href="register.html"> <span>Đăng ký</span> </a>
         </div>
+      </div>
+
+      <div class="menu-toggle">
+        <i class="fa fa-bars"></i>
       </div>
     </nav>
     <nav class="breadcrumb" id="breadcrumb"></nav>
